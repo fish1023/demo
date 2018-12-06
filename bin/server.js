@@ -9,6 +9,8 @@ import mysql from 'mysql'
 import config from '../config'
 import { errorMiddleware } from '../src/middleware'
 
+console.log(11111);
+
 
 const app = new Koa()
 app.keys = [config.session]
@@ -30,8 +32,7 @@ const modules = require('../src/modules')
 modules(app)
 
 app.listen(config.port, () => {
-    console.log(`Server started on ${config.port}`)
+  console.log(`Server started on ${config.port}`)
 })
 
 export default app
-
